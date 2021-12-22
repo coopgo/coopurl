@@ -1,10 +1,10 @@
-# coopgo/shurl
+# coopgo/coopurl
 
 [![made-with-Go](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](http://golang.org)
 [![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/coopgo/forms.svg)](https://github.com/coopgo/shurl)
 [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/coopgo/shurl)
 
-`coopgo/shurl` is an url shortener library, using badger as a key/value store.
+`coopgo/coopurl` is an url shortener library, using badger as a key/value store.
 
 ## Project Status
 
@@ -27,4 +27,4 @@ Do not duplicate an existing issue and keep each issue specific to an individual
 
 ## License
 
-`coopgo/shurl` is under the Apache 2.0 license. Please refer to the [LICENSE](LICENSE) file for details.
+`coopgo/coopurl` is under the Apache 2.0 license. Please refer to the [LICENSE](LICENSE) file for details.
