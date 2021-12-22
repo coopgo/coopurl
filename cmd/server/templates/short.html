@@ -1,0 +1,65 @@
+{{define "title"}}URL Shortener{{end}}
+
+{{define "body"}}
+<header>
+    <div id="logo">
+        <h1><a href="/" id="nostyle">CoopURL</a></h1>
+    </div>
+</header>
+<main>
+    <div id="container">
+        <div id="content">
+            <h1>Your shortened URL</h1>
+            <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
+        </div>
+        <script type="text/javascript">
+            var clipboard = new Clipboard('.copy');
+        </script>
+        <script type="text/javascript">
+            function toggle_visibility(id) {
+                var e = document.getElementById(id);
+                if (e.style.display == "none")
+                    e.style.display = "table";
+            }
+        </script>
+        <div id="urlbox">
+            <div id="formurl">
+                <input id="shortenurl" type="text" value="{{.ShortURL}}" onclick="copy();">
+                <div id="formbutton">
+                    <input id="copybutton" type="button" data-clipboard-target="#shortenurl" class="copy"
+                        value="Copy URL" onclick="copy();">
+                </div>
+            </div>
+            <div id="boxtext">
+                <p>Long URL: <a href="{{.PrevURLLink}}">{{.PrevURL}}</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Made with <span style="color: #ff0000;">&#10084;</span> by <a href="https://coopgo.fr" id="nostyle">COOPGO</a>
+    </p>
+</footer>
+
+<script>
+
+    function copy() {
+        /* Get the text field */
+        var copyText = document.getElementById("shortenurl");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(copyText.value);
+
+        /* Change button text */
+        var copybutton = document.getElementById("copybutton");
+        copybutton.value = "Copied !";
+    }
+
+</script>
+
+{{end}}

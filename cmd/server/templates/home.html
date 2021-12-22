@@ -1,0 +1,33 @@
+{{define "title"}}URL Shortener{{end}}
+
+{{define "body"}}
+<header>
+    <div id="logo">
+        <h1><a href="/" id="nostyle">CoopURL</a></h1>
+    </div>
+</header>
+<main>
+    <div id="container">
+        <div id="urlbox">
+            <h1>Paste the URL to be shortened</h1>
+            <form method="post">
+                <div id="formurl">
+                    <input type="text" name="u" placeholder="Enter the link here">
+                    <div id="formbutton">
+                        <input type="submit" value="Shorten URL">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="desc">
+            <p>CoopURL is a library to shorten a given URL.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Made with <span style="color: #ff0000;">&#10084;</span> by <a href="https://coopgo.fr" id="nostyle">COOPGO</a>
+    </p>
+</footer>
+
+{{end}}
